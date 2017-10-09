@@ -1,7 +1,9 @@
-const dollarAmount = 8.07;
+
+
+let dollarAmount = prompt("How much money do you have?");
 const piggyBank = {};
 
-let breakItDown = number => {
+let breakItDown = (number) => {
 
 let quarters = Math.floor(number / .25);
 piggyBank.quarters = quarters;
@@ -18,5 +20,7 @@ piggyBank.nickels = nickels;
 let pennies = Math.floor(remaining / .01);
 piggyBank.pennies = pennies;
 
-return(piggyBank)
+document.write(JSON.stringify(piggyBank));
 }
+
+breakItDown(dollarAmount)
